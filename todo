@@ -1,0 +1,3 @@
+Have to request attributes seperately one at a time
+No need for results limit
+Ebay is no longer supporting http requests. I just changed http to https in my code. If inexplicable errors arise, this might be why.

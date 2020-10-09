@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="aws-sdk.min.js"></script>
+    <title>Ebay Search</title>
+  </head>
+  <body>
+    <script src="js.js"></script>
+    <!--<script src="bundle.js"></script> -->
+    
+    <h1 id="title">My eBay Watchlist</h1><br><br>
+    
+      
+    <label for="selectQuery">Select Query:</label><br>
+    <select id="selectQuery" onchange="querySelected()">
+        <option value="none"></option>
+        <option value="new">Create New Query</option>
+        <option value="showAll">Show All</option>
+    </select><br><br>
+      
+    <div id="newQueryForm" style="visibility:hidden;">
+      <label for="keywords">Keywords:</label><br>
+      <input type="text" id="keywords" placeholder="Placeholder"><br>
+      <label for="maxPrice">Max Price:</label><br>
+      <input type="number" id="maxPrice" placeholder="50"><br>
+        
+      <input class="checkbox" type="checkbox" id="graded">
+      <label for="graded">Graded</label><br>
+      
+      <input class="checkbox" type="checkbox" id="showAuctions">
+      <label for="showAuctions">Show Auctions</label><br>
+        
+      <input type="submit" value="Make New Query" onclick="addNewQuery()"><br>
+      <h5>-OR-</h5>
+      <input type="file" id="csv_input"  onchange="csv_input()" accept=".csv"><br>
+        
+      <a href="https://ebay-search-e0427.firebaseapp.com/template.csv" target="_blank" title="template.csv">Download Template CSV</a>
+    </div><br>
+      
+    <h3 id="queryTitle"></h3>
+    
+    <table id="table" style="visibility:hidden">
+        <tr>
+        <th>eBay ID</th>
+        <th>Title</th>
+        <th onclick="sortTable(comparePrice)">Price &#8661</th>
+        <th onclick="sortTable(compareTime)">Hours Remaining &#8661</th>
+      </tr>
+    </table><br><br>
+      
+      
+    <button id="deleteQuery" onclick="deleteQuery()" style="visibility:hidden">Delete Query</button>  
+  </body>
+</html>

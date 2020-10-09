@@ -1,0 +1,119 @@
+:root {
+    --c: yellowgreen;
+}
+
+body {
+    background-color: rgb(230, 230, 230);
+    font-family: "Trebuchet MS";
+    text-align: center;
+}
+
+#table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+#table tr:nth-child(even){background-color: #f2f2f2;}
+
+#table tr:hover {background-color: #ddd;}
+
+#newQueryForm {
+    border-color: black;
+    border-width: medium;
+    border-style: solid;
+    margin: auto;
+    width: 250px;
+    height: 0px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#table th {
+    background-color: var(--c);
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px
+}
+
+#table tr {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#table td {
+    border: 1px lightgray solid;
+    padding: 10px;
+}
+
+#title {
+    text-align: center;
+    color: var(--c);
+    background-color: white;
+    width:400px;
+    border-width: medium;
+    border: solid;
+    border-radius: 1em;
+    margin: auto;
+    box-shadow: 3px 3px 3px gray;
+}
+
+
+#selectQuery {
+      /* styling */
+  background-color: white;
+  border: thin solid var(--c);
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+  /* reset */
+
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;  
+  
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--c) 50%),
+    linear-gradient(135deg, var(--c) 50%, transparent 50%),
+    linear-gradient(to right, lightgray, lightgray);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+#selectQuery:focus {
+  background-image:
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    linear-gradient(to right, gray, gray);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+  border-color: grey;
+  outline: 0;
+}
+
+#deleteQuery {
+    font-size: 15px;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: black;
+    background-image: linear-gradient(red, transparent 200%)
+}
